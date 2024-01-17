@@ -1,13 +1,8 @@
 <?php
-$servername = "dkintern.database.windows.net";
-$username = "demo@dkintern";
-$password = "DK@12345";
-$database = "mytrip-db";
+$connection = new PDO("mysql:host=localhost;dbname=book_mytrip", "root", "");
 
-$conn = new mysqli($servername, $username, $password, $database);
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+if (!$connection) {
+  echo " unable connect to data base";
 }
-echo "Connected successfully";
+  
 ?>
